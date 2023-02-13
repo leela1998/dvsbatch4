@@ -1,0 +1,12 @@
+pipeline{
+agent any
+stages{
+stage('welcome to jenkins') {
+steps{
+script{
+println "Hi all welcome to groovy/pipeline scripting"
+}
+}
+}
+}
+}
