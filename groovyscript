@@ -1,10 +1,16 @@
 pipeline{
 agent any
 stages{
-stage('welcome to jenkins') {
+stage('working with conditions') {
 steps{
 script{
-println "Hi all welcome to groovy/pipeline scripting"
+var1 =10
+if(var1.tointeger() == 10){
+println " var1 value is 10"
+}
+else{
+println " var1 value is not 10"
+}
 }
 }
 }
