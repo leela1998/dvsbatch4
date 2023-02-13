@@ -1,16 +1,16 @@
+def myfn() {
+println "function is been called"
+}
 pipeline{
 agent any
 stages{
 stage('working with loops') {
 steps{
 script{
-i=0
-for(i=0;i<=10;i++)
-{
-println " ${i}"
+myfn()
 }
 }
 }
 }
 }
-}
+
