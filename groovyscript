@@ -1,5 +1,8 @@
 pipeline{
 agent any
+parameters {
+  choice choices: ['dev', 'prod'], description: 'select env', name: 'ENV'
+}
 stages{
 stage('working with conditions') {
 steps{
