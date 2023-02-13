@@ -1,20 +1,16 @@
 pipeline{
 agent any
-parameters {
-  choice choices: ['dev', 'prod'], description: 'select env', name: 'ENV'
-}
-environment {
-  JAVA_HOME = "/opt/java/bin"
-}
-
 stages{
-stage('working with variables') {
+stage('working with condition') {
 steps{
 script{
-val1=20
-println "myval1 is ${val1}"
-println "myparameters value is ${params.ENV}"
-println "my env value is ${env.JAVA_HOME}"
+input message: 'enter var1 value', parameters: [string(name: 'var1', trim: true)]
+if(var1.tointeger() ==20){
+println "myvar1 is 10"
+}
+else{
+println "myvar1 value is not 10"
+}
 }
 }
 }
