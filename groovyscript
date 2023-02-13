@@ -5,7 +5,7 @@ stage('working with condition') {
 steps{
 script{
 var1=input message: 'enter var1 value', parameters: [string(name: 'var1', trim: true)]
-if(var1.toInteger() ==20){
+if(var1.toInteger() ==10){
 println "myvar1 is 10"
 }
 else{
