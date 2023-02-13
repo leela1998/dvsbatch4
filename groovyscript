@@ -4,7 +4,7 @@ stages{
 stage('working with condition') {
 steps{
 script{
-input message: 'enter var1 value', parameters: [string(name: 'var1', trim: true)]
+var1=input message: 'enter var1 value', parameters: [string(name: 'var1', trim: true)]
 if(var1.tointeger() ==20){
 println "myvar1 is 10"
 }
